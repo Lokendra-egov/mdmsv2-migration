@@ -1,0 +1,1119 @@
+[
+    {
+        "tenantId": "pg",
+        "code": "BPA.ApplicationType",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "code",
+                "active"
+            ],
+            "x-unique": [
+                "code"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.BPAApplicationMapping",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                },
+                "applicationType": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "roles": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "code",
+                "active",
+                "applicationType",
+                "roles"
+            ],
+            "x-unique": [
+                "code"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.BuildingPermitConfig",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "head": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "route": {
+                                "type": "string"
+                            },
+                            "component": {
+                                "type": "string"
+                            },
+                            "key": {
+                                "type": "string"
+                            },
+                            "nextStep": {
+                                "type": "string"
+                            },
+                            "texts": {
+                                "type": "object",
+                                "properties": {
+                                    "headerCaption": {
+                                        "type": "string"
+                                    },
+                                    "header": {
+                                        "type": "string"
+                                    },
+                                    "submitBarLabel": {
+                                        "type": "string"
+                                    },
+                                    "skipText": {
+                                        "type": "string"
+                                    },
+                                    "cardText": {
+                                        "type": "string"
+                                    },
+                                    "skipAndContinueText": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "inputs": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "label": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "validation": {
+                                            "type": "object",
+                                            "properties": {},
+                                            "required": []
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "hideInEmployee": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "route",
+                            "component",
+                            "nextStep",
+                            "key"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "head",
+                "body"
+            ],
+            "x-unique": [
+                "head"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.CalculationType",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "applicationType": {
+                    "type": "string"
+                },
+                "serviceType": {
+                    "type": "string"
+                },
+                "riskType": {
+                    "type": "string"
+                },
+                "feeType": {
+                    "type": "string"
+                },
+                "amount": {
+                    "type": "number"
+                },
+                "calsiLogic": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "parameter": {
+                                "type": "string"
+                            },
+                            "tolerancelimit": {
+                                "type": "number"
+                            },
+                            "calculationType": {
+                                "type": "string"
+                            },
+                            "deviation": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "from": {
+                                            "type": "number"
+                                        },
+                                        "to": {
+                                            "type": "number"
+                                        },
+                                        "MF": {
+                                            "type": "number"
+                                        },
+                                        "uom": {
+                                            "type": "number"
+                                        }
+                                    }
+                                }
+                            },
+                            "paramPath": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "required": [
+                "applicationType",
+                "serviceType",
+                "riskType",
+                "feeType",
+                "amount"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.CheckList",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "applicationType": {
+                    "type": "string"
+                },
+                "ServiceType": {
+                    "type": "string"
+                },
+                "RiskType": {
+                    "type": "string"
+                },
+                "WFState": {
+                    "type": "string"
+                },
+                "questions": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "question": {
+                                "type": "string"
+                            },
+                            "fieldType": {
+                                "type": "string"
+                            },
+                            "active": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                },
+                "docTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "code": {
+                                "type": "string"
+                            },
+                            "required": {
+                                "type": "boolean"
+                            }
+                        }
+                    }
+                },
+                "conditions": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "applicationType",
+                "ServiceType",
+                "RiskType",
+                "WFState"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.DocTypeMapping",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "applicationType": {
+                    "type": "string"
+                },
+                "ServiceType": {
+                    "type": "string"
+                },
+                "RiskType": {
+                    "type": "string"
+                },
+                "WFState": {
+                    "type": "string"
+                },
+                "docTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "code": {
+                                "type": "string"
+                            },
+                            "required": {
+                                "type": "boolean"
+                            },
+                            "allow": {
+                                "type": "boolean"
+                            },
+                            "order": {
+                                "type": "number"
+                            }
+                        },
+                        "required": [
+                            "code",
+                            "required",
+                            "allow",
+                            "order"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "applicationType",
+                "ServiceType",
+                "RiskType",
+                "WFState",
+                "docTypes"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.EdcrConfig",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "head": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "route": {
+                                "type": "string"
+                            },
+                            "component": {
+                                "type": "string"
+                            },
+                            "nextStep": {
+                                "type": "string"
+                            },
+                            "hideInEmployee": {
+                                "type": "boolean"
+                            },
+                            "key": {
+                                "type": "string"
+                            },
+                            "texts": {
+                                "type": "object",
+                                "properties": {
+                                    "headerCaption": {
+                                        "type": "string"
+                                    },
+                                    "header": {
+                                        "type": "string"
+                                    },
+                                    "cardText": {
+                                        "type": "string"
+                                    },
+                                    "submitBarLabel": {
+                                        "type": "string"
+                                    },
+                                    "skipText": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "headerCaption",
+                                    "header",
+                                    "cardText",
+                                    "submitBarLabel",
+                                    "skipText"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "route",
+                            "component",
+                            "nextStep",
+                            "hideInEmployee",
+                            "key",
+                            "texts"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "head",
+                "body"
+            ],
+            "x-unique": [
+                "head"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.EdcrConfig",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "head": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string"
+                            },
+                            "component": {
+                                "type": "string"
+                            },
+                            "key": {
+                                "type": "string"
+                            },
+                            "withoutLabel": {
+                                "type": "boolean"
+                            },
+                            "hideInCitizen": {
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "component",
+                            "key",
+                            "withoutLabel",
+                            "hideInCitizen"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "head",
+                "body"
+            ],
+            "x-unique": [
+                "head"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.NocTypeMapping",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "applicationType": {
+                    "type": "string"
+                },
+                "serviceType": {
+                    "type": "string"
+                },
+                "riskType": {
+                    "type": "string"
+                },
+                "nocTriggerState": {
+                    "type": "string"
+                },
+                "nocTypes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string"
+                            },
+                            "required": {
+                                "type": "boolean"
+                            },
+                            "documentType": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "type",
+                            "required",
+                            "documentType"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "applicationType",
+                "serviceType",
+                "riskType",
+                "nocTriggerState",
+                "nocTypes"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.OCBuildingPermitConfig",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "head": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "route": {
+                                "type": "string"
+                            },
+                            "component": {
+                                "type": "string"
+                            },
+                            "hideInEmployee": {
+                                "type": "boolean"
+                            },
+                            "key": {
+                                "type": "string"
+                            },
+                            "nextStep": {
+                                "type": "string"
+                            },
+                            "texts": {
+                                "type": "object",
+                                "properties": {
+                                    "headerCaption": {
+                                        "type": "string"
+                                    },
+                                    "header": {
+                                        "type": "string"
+                                    },
+                                    "cardText": {
+                                        "type": "string"
+                                    },
+                                    "submitBarLabel": {
+                                        "type": "string"
+                                    },
+                                    "skipText": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "inputs": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "label": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "validation": {
+                                            "type": "object",
+                                            "properties": {},
+                                            "required": []
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "required": [
+                            "route",
+                            "component",
+                            "key",
+                            "nextStep"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "head",
+                "body"
+            ],
+            "x-unique": [
+                "head"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.OCEdcrConfig",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "head": {
+                    "type": "string"
+                },
+                "body": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "route": {
+                                "type": "string"
+                            },
+                            "component": {
+                                "type": "string"
+                            },
+                            "nextStep": {
+                                "type": "string"
+                            },
+                            "hideInEmployee": {
+                                "type": "boolean"
+                            },
+                            "key": {
+                                "type": "string"
+                            },
+                            "texts": {
+                                "type": "object",
+                                "properties": {
+                                    "headerCaption": {
+                                        "type": "string"
+                                    },
+                                    "header": {
+                                        "type": "string"
+                                    },
+                                    "cardText": {
+                                        "type": "string"
+                                    },
+                                    "submitBarLabel": {
+                                        "type": "string"
+                                    },
+                                    "skipText": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },
+                        "required": [
+                            "route",
+                            "component",
+                            "nextStep",
+                            "key"
+                        ]
+                    }
+                }
+            },
+            "required": [
+                "head",
+                "body"
+            ],
+            "x-unique": [
+                "head"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.OccupancyType",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                },
+                "maxCoverage": {
+                    "type": "number"
+                },
+                "minFar": {
+                    "type": "number"
+                },
+                "maxFar": {
+                    "type": "number"
+                },
+                "orderNumber": {
+                    "type": "number"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "colorCode": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "name",
+                "code",
+                "active",
+                "maxCoverage",
+                "minFar",
+                "maxFar",
+                "orderNumber",
+                "description",
+                "colorCode"
+            ],
+            "x-unique": [
+                "code"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.ProposedLandUse",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "name",
+                "code",
+                "active"
+            ],
+            "x-unique": [
+                "code"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.RiskTypeComputation",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "fromPlotArea": {
+                    "type": "number"
+                },
+                "toPlotArea": {
+                    "type": "number"
+                },
+                "fromBuildingHeight": {
+                    "type": "number"
+                },
+                "toBuildingHeight": {
+                    "type": "number"
+                },
+                "riskType": {
+                    "type": "string"
+                },
+                "note": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fromPlotArea",
+                "toPlotArea",
+                "fromBuildingHeight",
+                "toBuildingHeight",
+                "riskType",
+                "note"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.ServiceType",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                },
+                "applicationType": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "code",
+                "active",
+                "applicationType"
+            ],
+            "x-unique": [
+                "code"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.StakeholderConfig",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string"
+                },
+                "route": {
+                    "type": "string"
+                },
+                "isMandatory": {
+                    "type": "boolean"
+                },
+                "component": {
+                    "type": "string"
+                },
+                "texts": {
+                    "type": "object",
+                    "properties": {
+                        "headerCaption": {
+                            "type": "string"
+                        },
+                        "header": {
+                            "type": "string"
+                        },
+                        "cardText": {
+                            "type": "string"
+                        },
+                        "submitBarLabel": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "nextStep": {
+                    "type": "string"
+                },
+                "key": {
+                    "type": "string"
+                },
+                "withoutLabel": {
+                    "type": "boolean"
+                },
+                "hideInEmployee": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "route",
+                "component",
+                "nextStep",
+                "key"
+            ],
+            "x-unique": [
+                "head"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.SubOccupancyType",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                },
+                "occupancyType": {
+                    "type": "string"
+                },
+                "maxCoverage": {
+                    "type": "number"
+                },
+                "minFar": {
+                    "type": "number"
+                },
+                "maxFar": {
+                    "type": "number"
+                },
+                "orderNumber": {
+                    "type": "number"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "colorCode": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "name",
+                "code",
+                "active",
+                "occupancyType",
+                "maxCoverage",
+                "minFar",
+                "maxFar",
+                "orderNumber",
+                "description",
+                "colorCode"
+            ],
+            "x-unique": [
+                "code"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.TownPlanningScheme",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "name",
+                "code",
+                "active"
+            ],
+            "x-unique": [
+                "code"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.Usages",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "code": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                },
+                "occupancyType": {
+                    "type": "string"
+                },
+                "subOccupancyType": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "orderNumber": {
+                    "type": "number"
+                },
+                "colorCode": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "name",
+                "code",
+                "active",
+                "occupancyType",
+                "subOccupancyType",
+                "description",
+                "orderNumber",
+                "colorCode"
+            ],
+            "x-unique": [
+                "code"
+            ]
+        },
+        "isActive": true
+    },
+    {
+        "tenantId": "pg",
+        "code": "BPA.homePageUrlLinks",
+        "description": "  ",
+        "definition": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "title": "Generated schema for Root",
+            "type": "object",
+            "properties": {
+                "applicationType": {
+                    "type": "string"
+                },
+                "serviceType": {
+                    "type": "string"
+                },
+                "link": {
+                    "type": "string"
+                },
+                "WFState": {
+                    "type": "string"
+                },
+                "flow": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "applicationType",
+                "serviceType",
+                "link",
+                "WFState",
+                "flow",
+                "active"
+            ],
+            "x-unique": [
+                "flow"
+            ]
+        },
+        "isActive": true
+    }
+]
