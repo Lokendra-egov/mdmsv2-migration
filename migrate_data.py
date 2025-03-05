@@ -26,7 +26,7 @@ def create_data(data_path, tenantId, is_portforward = True):
                                     data=data, isActive=True)
 
         body = dataCreate.DataCreate(RequestInfo=REQINFO, 
-                                    Mdms=mdms_data).model_dump()
+                                    Mdms=mdms_data).model_dump(by_alias=True)
 
         response = utils.make_request(method="POST",
                         url=base_url+schemaCode,
