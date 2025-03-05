@@ -1,7 +1,7 @@
 from migrate_schema import *
 from migrate_data import *
 
-create_schema("schema/naljal.json", tenantId="as")
+create_schema("schema/BPA.json", tenantId="pg")
 # create_all_schema("schema", tenantId="as")
 # create_all_schema("schema", tenantId="as", is_portforward=False)
 

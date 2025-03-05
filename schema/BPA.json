@@ -233,6 +233,9 @@
                 "riskType",
                 "feeType",
                 "amount"
+            ],
+            "x-unique": [
+                "applicationType"
             ]
         },
         "isActive": true
@@ -301,6 +304,9 @@
                 "ServiceType",
                 "RiskType",
                 "WFState"
+            ],
+            "x-unique": [
+                "applicationType"
             ]
         },
         "isActive": true
@@ -359,6 +365,9 @@
                 "RiskType",
                 "WFState",
                 "docTypes"
+            ],
+            "x-unique": [
+                "applicationType"
             ]
         },
         "isActive": true
@@ -547,6 +556,9 @@
                 "riskType",
                 "nocTriggerState",
                 "nocTypes"
+            ],
+            "x-unique": [
+                "applicationType"
             ]
         },
         "isActive": true
@@ -836,6 +848,9 @@
                 "toBuildingHeight",
                 "riskType",
                 "note"
+            ],
+            "x-unique": [
+                "riskType"
             ]
         },
         "isActive": true
